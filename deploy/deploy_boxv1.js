@@ -18,6 +18,11 @@ module.exports = async function ({ getNamedAccounts, deployments, run }) {
         log: true,
       });
 
+    console.log("Deployment address:", deployment.address);
+
+    const BoxContract = await deployments.get('Box'); 
+    console.log("Box address:", BoxContract.address);
+
     // await deploy('Box', {
     //     from: deployer,
     //     proxy: true,

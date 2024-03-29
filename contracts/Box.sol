@@ -12,6 +12,6 @@ contract Box is Initializable {
     }
 
     function inc() external {
-        value += 4;
+        value += 100;
     }
 }
