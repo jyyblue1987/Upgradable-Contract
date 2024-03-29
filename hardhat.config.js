@@ -134,7 +134,8 @@ module.exports = {
     // Polygon testnet
     mumbai: { 
       // url: "https://rpc-mumbai.maticvigil.com",
-      url: "https://polygon-mumbai.g.alchemy.com/v2/MS1xXvCUQzKUdIBnUrKZpdx26AHMixO4",
+      // url: "https://polygon-mumbai.g.alchemy.com/v2/MS1xXvCUQzKUdIBnUrKZpdx26AHMixO4",
+      url: "https://polygon-mumbai-bor-rpc.publicnode.com",      
       chainId: chainIds.mumbai,
       accounts: [
         privateKey

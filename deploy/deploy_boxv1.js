@@ -1,5 +1,5 @@
 module.exports = async function ({ getNamedAccounts, deployments, run }) {
-    const { deploy, read } = deployments;
+    const { deploy } = deployments;
     const { deployer } = await getNamedAccounts();
    
     const deployment = await deploy("Box", {
@@ -9,16 +9,20 @@ module.exports = async function ({ getNamedAccounts, deployments, run }) {
           proxyContract: "OpenZeppelinTransparentProxy",
           owner: deployer,
           execute: {
-            methodName: "initialize",
-            args: [30],
+            init: {
+                methodName: "initialize",
+                args: [20],
+            }
           },
         },
         log: true,
       });
-    
-    //   if (deployment.newlyDeployed) {
-    //     await run("etherscan-verify");
-    // }
+
+    // await deploy('Box', {
+    //     from: deployer,
+    //     proxy: true,
+    //     log: true
+    // });
   };
   
   module.exports.id = 'deploy_boxv1'
