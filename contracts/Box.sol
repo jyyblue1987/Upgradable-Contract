@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: MIT
+
 pragma solidity ^0.8.4;
 
 contract Box {
@@ -8,6 +10,6 @@ contract Box {
     }
 
     function inc() external {
-        value += 1;
+        value += 6;
     }
 }
